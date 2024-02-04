@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Davis Torres | Desarrolladora Web</title>
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <img src="images/davis_logo.png" alt=""/>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#" onclick="cargarSeccion('inicio')">INICIO</a></li>
+                    <li><a href="#" onclick="cargarSeccion('sobremi')">SOBRE MI</a></li>
+                    <li><a href="#" onclick="cargarSeccion('skills')">SKILLS</a></li>
+                    <li><a href="#" onclick="cargarSeccion('curriculum')">CURRICULUM</a></li>
+                    <li><a href="#" onclick="cargarSeccion('portafolio')">PORTAFOLIO</a></li>
+                    <li><a href="#" onclick="cargarSeccion('contacto')">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()"></div>
+        </header>
+    </div>
+
+    <!-- Contenido dinámico -->
+    <div class="contenedor-contenido">
+        <!-- Aquí se cargará dinámicamente el contenido de las secciones -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#" class="arriba">
+            <i class="fas fa-angle-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://github.com/DavysTorres" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://discord.com/channels/@me" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.linkedin.com/in/davis-torres-a6b7981a3" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank"><i class="fas fa-rss"></i></a> 
+        </div>
+    </footer>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+    <script>
+        // Función para cargar una sección dinámicamente
+        function cargarSeccion(nombreSeccion) {
+            const rutaArchivo = `secciones/${nombreSeccion}.html`;
+
+            fetch(rutaArchivo)
+                .then(response => response.text())
+                .then(html => {
+                    document.querySelector('.contenedor-contenido').innerHTML = html;
+                })
+                .catch(error => console.error('Error al cargar la sección', error));
+        }
+    
+        // Ejemplo de carga de la sección al cargar la página (puedes eliminar esto si no es necesario)
+        document.addEventListener("DOMContentLoaded", function () {
+            cargarSeccion('inicio');
+        });
+    </script>
+</body>
+</html>
