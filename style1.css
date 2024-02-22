@@ -1,0 +1,13 @@
+.miCaja{
+    width: 300px;
+    height: 200px;
+    border: solid 2px red;
+    margin: 20px;
+    background-color: yellow;
+    background: url("images/davis_logo3.png") top center;
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start;
+    
+}
