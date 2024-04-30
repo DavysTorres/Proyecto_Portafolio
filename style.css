@@ -13,14 +13,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Protest Revolution', sans-serif;
+  font-family: 'poetsenone', sans-serif;
 }
 @font-face {
   font-family:"Newsreader";
   src: url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Protest+Revolution&display=swap');
-  font-family: "Protest Revolution";
-  src: url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap') format('woff2')
-  /* Otras propiedades según sea necesario */
+}
+
+@font-face {
+  font-family: 'poetsenone';
+  src: url('/assets/fonts/PoetsenOne-Regular.ttf');
 }
 
 /*--------------------------------------------------------------
@@ -59,7 +61,7 @@ h6 {
   font-weight: 600;
   -moz-text-align-last: center;
   text-align-last: auto;
-  font-family: 'Protest Revolution', sans-serif;
+  font-family: 'poetsenone', sans-serif;
 }
 
 #header .profile .social-links a {
@@ -267,7 +269,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
@@ -276,27 +278,16 @@ section {
 }
 
 .section-title {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
   position: relative;
   color: #173b6c;
-}
-
-.section-title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #149ddd;
-  bottom: 0;
-  left: 0;
 }
 
 .section-title p {
@@ -307,9 +298,20 @@ section {
 # About
 --------------------------------------------------------------*/
 .img-fluid {
+  background: rgb(156,167,158); background: radial-gradient( rgba(154, 202, 186, 0.855) 0%, rgba(41,59,86,1) 80%);
   border-radius: 50px;
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
+}
+
+.about-parrafo p{
+  text-align: justify;
+  font-size: 18px;
+}
+
+.about-parrafo2 p{
+  text-align: justify;
+  font-size: 18px;
 }
 
 .about .content h3 {
@@ -347,6 +349,7 @@ section {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
+
 .skills .progress {
   height: 60px;
   display: block;
@@ -356,17 +359,17 @@ section {
 
 .skills .progress .skill {
   padding: 0;
-  margin: 0 0 6px 0;
+  margin: 0 0 5px 0;
   text-transform: uppercase;
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: #3f6497;
 }
 
 .skills .progress .skill .val {
   float: right;
-  font-style: normal;
+  font-style: oblique;
 }
 
 .skills .progress-bar-wrap {
@@ -378,7 +381,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #149ddd;
+  background-color: #1a4f68;
 }
 
 
@@ -389,8 +392,8 @@ section {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
-  margin-bottom: 20px;
-  color: #050d18;
+  margin-bottom: 30px;
+  color: #02204b;
 }
 
 .resume .resume-item {
